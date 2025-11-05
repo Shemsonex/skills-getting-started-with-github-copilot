@@ -158,18 +158,20 @@ footer {
 
 /* Use native list bullets and spacing */
 .participants-list {
-  list-style: disc;
-  margin: 0 0 0 20px; /* keeps bullets visible */
+  list-style: none;
+  margin: 0;
   padding: 0;
 }
 
-/* Each participant should render as a normal list item so bullets appear */
+/* Each participant rendered as a horizontal row with a badge and a delete button */
 .participants-list .participant-item {
-  list-style: inherit;
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin: 6px 0;
 }
 
-/* Badge stays inline but does not remove the bullet */
+/* Badge styling */
 .participant-badge {
   display: inline-block;
   padding: 6px 10px;
@@ -179,6 +181,22 @@ footer {
   font-size: 13px;
   border: 1px solid #cfe0ff;
   box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset;
+}
+
+/* Delete button next to each participant */
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.delete-btn:hover {
+  background: rgba(198,40,40,0.08);
 }
 
 /* tiny fallback text for empty lists (no bullet) */
