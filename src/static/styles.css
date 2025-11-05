@@ -142,3 +142,68 @@ footer {
   padding: 20px;
   color: #666;
 }
+
+.participants {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed #eee;
+}
+
+.participants-header {
+  margin-bottom: 8px;
+  color: #1a237e;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Use native list bullets and spacing */
+.participants-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Each participant rendered as a horizontal row with a badge and a delete button */
+.participants-list .participant-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin: 6px 0;
+}
+
+/* Badge styling */
+.participant-badge {
+  display: inline-block;
+  padding: 6px 10px;
+  background: linear-gradient(180deg,#e8f0ff,#d7e6ff);
+  color: #0b3d91;
+  border-radius: 999px;
+  font-size: 13px;
+  border: 1px solid #cfe0ff;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.4) inset;
+}
+
+/* Delete button next to each participant */
+.delete-btn {
+  background: transparent;
+  border: none;
+  color: #c62828;
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 4px 6px;
+  border-radius: 4px;
+}
+
+.delete-btn:hover {
+  background: rgba(198,40,40,0.08);
+}
+
+/* tiny fallback text for empty lists (no bullet) */
+.participant-none {
+  color: #666;
+  font-style: italic;
+  font-size: 13px;
+  list-style: none;
+  margin: 6px 0;
+}
